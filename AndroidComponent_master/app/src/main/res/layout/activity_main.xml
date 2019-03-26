@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="www.wadedwyane.com.androidcomponent_master.MainActivity">
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:text="点我登录啊"
+        android:layout_height="48dip" />
+
+    <Button
+        android:id="@+id/btn_gomime"
+        android:layout_width="match_parent"
+        android:text="跳转到我的组件"
+        android:layout_height="48dip" />
+
+    <Button
+        android:id="@+id/btn_showmime"
+        android:layout_width="match_parent"
+        android:text="展示我的信息啊"
+        android:layout_height="48dip" />
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+</LinearLayout>
