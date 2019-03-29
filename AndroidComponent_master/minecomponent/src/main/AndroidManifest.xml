@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="www.wadedwyane.com.maincomponent">
+
+    <application>
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".activity.MineActivity"/>
+    </application>
+
+</manifest>
