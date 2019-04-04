@@ -1,7 +1,5 @@
 package com.wadedwyane.www.databus;
 
-import androidx.lifecycle.MutableLiveData;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -13,7 +11,8 @@ public class LiveDataBus {
 
     public static LiveDataBus instance;
 
-    public Map<String, MutableLiveData<Object>> bus;
+//    public Map<String, MutableLiveData<Object>> bus;
+    public Map<String, LiveData<Object>> bus;
 
     public static LiveDataBus getInstance() {
         if (null == instance) {
@@ -37,10 +36,10 @@ public class LiveDataBus {
      * @param <T>
      * @return
      */
-    public <T>MutableLiveData<T> getChannel(String channel, Class<T> type) {
+    /*public <T>MutableLiveData<T> getChannel(String channel, Class<T> type) {
         if (!bus.containsKey(channel)) {
             bus.put(channel, new MutableLiveData<Object>());
         }
         return (MutableLiveData<T>) bus.get(channel);
-    }
+    }*/
 }
