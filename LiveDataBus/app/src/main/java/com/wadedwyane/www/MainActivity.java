@@ -1,13 +1,14 @@
 package com.wadedwyane.www;
 
-import android.arch.lifecycle.Observer;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
 import com.wadedwyane.www.databus.LiveDataBus;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        LiveDataBus.getInstance().getChannel("event", String.class).observe(this, new Observer<String>() {
+        LiveDataBus.getInstance().getChannel("event", String.class).observe(MainActivity.this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 Toast.makeText(MainActivity.this, s, Toast.LENGTH_SHORT).show();
