@@ -1,14 +1,15 @@
 package com.wadedwyane.www;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
 import com.wadedwyane.www.databus.LiveDataBus;
+import com.wadedwyane.www.databus.Observer;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.Observer;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,10 +26,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void jump(View view) {
-
+        Intent intent = new Intent(this, SecondActivity.class);
+        startActivity(intent);
     }
 
     public void send(View view) {
-        LiveDataBus.getInstance().getChannel("event",String.class).postValue("make a toast");
+        LiveDataBus.getInstance().getChannel("event",String.class).setValue("make a toast");
     }
 }

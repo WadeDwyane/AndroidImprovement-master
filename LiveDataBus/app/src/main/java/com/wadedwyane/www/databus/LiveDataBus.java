@@ -36,10 +36,10 @@ public class LiveDataBus {
      * @param <T>
      * @return
      */
-    /*public <T>MutableLiveData<T> getChannel(String channel, Class<T> type) {
+    public <T> LiveData<T> getChannel(String channel, Class<T> type) {
         if (!bus.containsKey(channel)) {
-            bus.put(channel, new MutableLiveData<Object>());
+            bus.put(channel, new LiveData<Object>());
         }
-        return (MutableLiveData<T>) bus.get(channel);
-    }*/
+        return (LiveData<T>) bus.get(channel);
+    }
 }
