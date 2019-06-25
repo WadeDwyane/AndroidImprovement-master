@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">UI-master</string>
+    <string name="right_top_text">这是位于左上角的</string>
+    <string name="right_bottom">这是右下角的</string>
+    <string name="music_list">歌单</string>
+    <string name="love_song">恋曲1990</string>
 </resources>

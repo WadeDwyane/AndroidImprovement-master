@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.wadedwyane.www.widget.PrecentLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.PrecentLayoutActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:text="百分比布局,屏幕高度的50%,屏幕宽度的50%"
+        app:heightPrecent="0.5"
+        app:widthPrecent="0.5"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#f00"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="百分比布局,屏幕高度的50%,屏幕宽度的50%"
+        app:heightPrecent="0.5"
+        app:widthPrecent="0.5"/>
+
+
+</com.wadedwyane.www.widget.PrecentLayout>

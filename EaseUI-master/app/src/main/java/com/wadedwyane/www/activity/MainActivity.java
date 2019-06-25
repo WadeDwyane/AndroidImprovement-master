@@ -20,6 +20,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn5).setOnClickListener(this);
         findViewById(R.id.btn6).setOnClickListener(this);
         findViewById(R.id.btn7).setOnClickListener(this);
+        findViewById(R.id.btn8).setOnClickListener(this);
+        findViewById(R.id.btn9).setOnClickListener(this);
+        findViewById(R.id.btn10).setOnClickListener(this);
+        findViewById(R.id.btn11).setOnClickListener(this);
+        findViewById(R.id.btn12).setOnClickListener(this);
+        findViewById(R.id.btn13).setOnClickListener(this);
+        findViewById(R.id.btn14).setOnClickListener(this);
+        findViewById(R.id.btn15).setOnClickListener(this);
+        findViewById(R.id.btn16).setOnClickListener(this);
+        findViewById(R.id.btn17).setOnClickListener(this);
+        findViewById(R.id.btn18).setOnClickListener(this);
+        findViewById(R.id.btn19).setOnClickListener(this);
+        findViewById(R.id.btn20).setOnClickListener(this);
     }
 
     @Override
@@ -52,6 +65,58 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn7:
                 Intent intent7 = new Intent(this, BallShotActivity.class);
                 startActivity(intent7);
+                break;
+            case R.id.btn8:
+                Intent intent8 = new Intent(this, RotateSplashActivity.class);
+                startActivity(intent8);
+                break;
+            case R.id.btn9:
+                Intent intent9 = new Intent(this, QQUnReadDragActivity.class);
+                startActivity(intent9);
+                break;
+            case R.id.btn10:
+                Intent intent10 = new Intent(this, XiaoHongShuSplashActivity.class);
+                startActivity(intent10);
+                break;
+            case R.id.btn11:
+                Intent intent11 = new Intent(this, NetEaseYunMusicActivity.class);
+                startActivity(intent11);
+                break;
+            case R.id.btn12:
+                Intent intent12 = new Intent(this, PrecentLayoutActivity.class);
+                startActivity(intent12);
+                break;
+            case R.id.btn13:
+                Intent intent13 = new Intent(this, ModifyDensityActivity.class);
+                startActivity(intent13);
+                break;
+            case R.id.btn14:
+                Intent intent14 = new Intent(this, DisplayCutoutActivity.class);
+                startActivity(intent14);
+                break;
+            case R.id.btn15:
+                Intent intent15 = new Intent(this, YunMusicListActivity.class);
+                startActivity(intent15);
+                break;
+            case R.id.btn16:
+                Intent intent16 = new Intent(this, YunMusicListActivity.class);
+                startActivity(intent16);
+                break;
+            case R.id.btn17:
+                Intent intent17 = new Intent(this, RecyclerViewTitleHoverActivity.class);
+                startActivity(intent17);
+                break;
+            case R.id.btn18:
+                Intent intent18 = new Intent(this, CardViewActivity.class);
+                startActivity(intent18);
+                break;
+            case R.id.btn19:
+                Intent intent19 = new Intent(this, CustomComposeActivity.class);
+                startActivity(intent19);
+                break;
+            case R.id.btn20:
+                Intent intent20 = new Intent(this, CustomRecyclerViewActivity.class);
+                startActivity(intent20);
                 break;
             default:
                 break;
