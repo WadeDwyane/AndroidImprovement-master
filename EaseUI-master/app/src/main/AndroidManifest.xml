@@ -42,6 +42,7 @@
         <activity android:name=".activity.CardViewActivity"/>
         <activity android:name=".activity.CustomComposeActivity"/>
         <activity android:name=".activity.CustomRecyclerViewActivity"/>
+        <activity android:name=".activity.BigImageActivity" />
     </application>
 
 </manifest>

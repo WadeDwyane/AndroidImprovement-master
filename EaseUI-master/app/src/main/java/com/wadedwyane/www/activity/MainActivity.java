@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn18).setOnClickListener(this);
         findViewById(R.id.btn19).setOnClickListener(this);
         findViewById(R.id.btn20).setOnClickListener(this);
+        findViewById(R.id.btn21).setOnClickListener(this);
     }
 
     @Override
@@ -117,6 +118,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn20:
                 Intent intent20 = new Intent(this, CustomRecyclerViewActivity.class);
                 startActivity(intent20);
+                break;
+            case R.id.btn21:
+                Intent intent21 = new Intent(this, BigImageActivity.class);
+                startActivity(intent21);
                 break;
             default:
                 break;

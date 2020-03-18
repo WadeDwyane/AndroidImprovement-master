@@ -11,14 +11,10 @@ public class ParallaxViewTag {
 	public float yOut;
 	public float alphaIn;
 	public float alphaOut;
-	
-	
 	@Override
 	public String toString() {
 		return "ParallaxViewTag [index=" + index + ", xIn=" + xIn + ", xOut="
 				+ xOut + ", yIn=" + yIn + ", yOut=" + yOut + ", alphaIn="
 				+ alphaIn + ", alphaOut=" + alphaOut + "]";
 	}
-
-	
 }
