@@ -1,0 +1,33 @@
+ext {
+    username = "simon"
+
+    //生产/测试环境
+    isRelease = true
+
+    //建立map存储
+    androidId = [
+            compileSdkVersion:28,
+            buildToolsVersion:"28.0.0",
+            minSdkVersion:16,
+            targetSdkVersion:28,
+            versionCode:1,
+            versionName:"1.0"
+    ]
+
+    appId = [
+            app:"com.example.componentelement",
+    ]
+
+    url = [
+            debug:"www.baidu.com",
+            release:"www.wade.com"
+    ]
+
+    supportLibrary = "28.0.0"
+
+    dependencies = [
+            appcompat:"com.android.support:appcompat-v7:${supportLibrary}",
+            design:"com.android.support:design:${supportLibrary}",
+            recyclerview:"com.android.support:recyclerview-v7:${supportLibrary}"
+    ]
+}

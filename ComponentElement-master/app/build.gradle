@@ -1,0 +1,73 @@
+apply plugin: 'com.android.application'
+
+rootProject.ext.username = 163 //弱类型语言Groovy
+println "${username}"
+println "${rootProject.ext.username}"
+
+def androidId = rootProject.ext.androidId
+def appId = rootProject.ext.appId
+def support = rootProject.ext.dependencies
+def url = rootProject.ext.url
+
+android {
+    compileSdkVersion androidId.compileSdkVersion
+    buildToolsVersion androidId.buildToolsVersion
+
+    defaultConfig {
+        applicationId appId.app
+        minSdkVersion androidId.minSdkVersion
+        targetSdkVersion androidId.targetSdkVersion
+        versionCode androidId.versionCode
+        versionName androidId.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file("./debug.jks")
+            storePassword "123456"
+            keyAlias "debug"
+            keyPassword "123456"
+            v1SigningEnabled true // 对jar签名
+            v2SigningEnabled true // 对apk签名
+        }
+
+        release {
+            storeFile file("./release.jks")
+            storePassword "654321"
+            keyAlias "release"
+            keyPassword "654321"
+            v1SigningEnabled true //对jar签名
+            v2SigningEnabled true // 对apk签名
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+            buildConfigField("String", "url", "\"${url.debug}\"")
+            minifyEnabled false
+        }
+
+        release {
+            signingConfig signingConfigs.release
+            buildConfigField("String", "url", "\"${url.release}\"")
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+//    implementation group:"com.android.support",name:"appcompat-v7",version:"28.0.0" // 全拼应该是这个
+    // 通过定义的support进行引用
+//    implementation support.appcompat
+//    implementation support.design
+//    implementation support.recyclerview
+
+    // 更简单的引用写法
+    support.each { key, value -> implementation value }
+}
