@@ -1,0 +1,23 @@
+import javax.tools.JavaCompiler
+
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':annotation')
+
+    compileOnly 'com.google.auto.service:auto-service:1.0-rc4'
+    annotationProcessor 'com.google.auto.service:auto-service:1.0-rc4'
+
+    // 引入javapoet依赖
+    implementation 'com.squareup:javapoet:1.12.1'
+}
+
+// 处理java控制台输出乱码
+tasks.withType(JavaCompiler) {
+    options.Encoding = "utf-8"
+}
+
+// jdk编译的版本是jdk1.7
+sourceCompatibility = "7"
+targetCompatibility = "7"
