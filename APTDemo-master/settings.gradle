@@ -1,0 +1,4 @@
+rootProject.name='APT-Demo'
+include ':app'
+include ':annotation'
+include ':compiler'
